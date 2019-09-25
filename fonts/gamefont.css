@@ -1,6 +1,5 @@
 @font-face {
-    font-family: GameFont;
-    src: url("mplus-1m-regular.ttf");
+    font-family: Microsoft JhengHei;
 }
 
 .IIV::-webkit-media-controls-play-button,
