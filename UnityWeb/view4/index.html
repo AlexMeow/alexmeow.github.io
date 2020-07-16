@@ -11,29 +11,15 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/view4.json", {onProgress: UnityProgress});
     </script>
-        <style type="text/css">
-          html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            background: black;
-          }
-          #unityContainer {
-            height: 100% !important;
-            width: 100% !important;
-            position: fixed;
-          }
-        </style>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
-      <!-- <div class="footer">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
         <div class="title">New Unity Project</div>
-      </div> -->
+      </div>
     </div>
   </body>
 </html>
