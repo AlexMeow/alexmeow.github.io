@@ -239,16 +239,16 @@
         }
 
         // presplash
-        presplash = undefined;
-        if (FS.readdir('/').indexOf('web-presplash.png') >= 0) {
-          presplash = FS.readFile('/web-presplash.png');
-        } else if (FS.readdir('/').indexOf('web-presplash.jpg') >= 0) {
-          presplash = FS.readFile('/web-presplash.jpg');
-        } else if (FS.readdir('/').indexOf('web-presplash.webp') >= 0) {
-          presplash = FS.readFile('/web-presplash.webp');
-        } else if (FS.readdir('/').indexOf('web-presplash-default.jpg') >= 0) {
-          presplash = FS.readFile('/web-presplash-default.jpg');
-        }
+        // presplash = undefined;
+        // if (FS.readdir('/').indexOf('web-presplash.png') >= 0) {
+        //   presplash = FS.readFile('/web-presplash.png');
+        // } else if (FS.readdir('/').indexOf('web-presplash.jpg') >= 0) {
+        //   presplash = FS.readFile('/web-presplash.jpg');
+        // } else if (FS.readdir('/').indexOf('web-presplash.webp') >= 0) {
+        //   presplash = FS.readFile('/web-presplash.webp');
+        // } else if (FS.readdir('/').indexOf('web-presplash-default.jpg') >= 0) {
+        //   presplash = FS.readFile('/web-presplash-default.jpg');
+        // }
 
         div = document.createElement('div');
         div.id = 'presplash';  // used by presplashEnd()
@@ -256,15 +256,17 @@
         c = document.getElementById('canvas');
         c.parentElement.prepend(div);
 
-        if (presplash) {
-          obj_url = window.URL.createObjectURL(new Blob([presplash]));
-          img = document.createElement('img');
-          img.src = obj_url;
-          img.style = 'display: block; margin: auto; width: 100%; height: 100%; object-fit: contain';
-          div.appendChild(img)
-        } else {
-          Module.print("Loading game, please wait...\n");
-        }
+        // if (presplash) {
+        //   obj_url = window.URL.createObjectURL(new Blob([presplash]));
+        //   img = document.createElement('img');
+        //   img.src = obj_url;
+        //   img.style = 'display: block; margin: auto; width: 100%; height: 100%; object-fit: contain';
+        //   div.appendChild(img)
+        // } else {
+        //   Module.print("Loading game, please wait...\n");
+        // }
+
+        Module.print("Loading game, please wait...\n");
 
         // give control back to webui before running main
         window.setTimeout(function() {
